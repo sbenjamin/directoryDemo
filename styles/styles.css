@@ -1,0 +1,158 @@
+
+/* ref: https://docs.angularjs.org/api/ng/directive/ngCloak */
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+	}
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
+body {
+    overflow: hidden;   
+}
+
+main {
+    margin-left: 12px;
+    margin-right:25px;
+}
+
+
+/* Business Directories */
+
+.resultsWrapper{
+    height: 450px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.resultsDetailsWrapper{
+    height: 350px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.companies{
+    margin-bottom: 20px;
+}
+
+.contactsTable{
+    display: inline-block;
+    border: 1px solid #000;
+}
+
+
+
+.contactsTable :nth-child(even) .contactsRow {
+    background-color: #ddd;
+}
+
+.companyContacts{
+    margin: 25px 0 0 30px;
+}
+
+/*Set the Min-Width for all columns*/
+.contactsRow > div{
+    min-width:150px;
+    padding-left: 4px;
+    cursor: pointer;
+}
+
+.detailsRow > div{
+    cursor: auto;
+}
+
+
+
+.fullname{
+    display: inline-block;
+    float:left;
+}
+
+/* Last Row */
+.contactsTable :last-child .contactsRow div.fullname,
+.contactsTable :last-child .contactsRow div.phoneNumber,
+.contactsTable :last-child .contactsRow div.emailAddress,
+.contactsTable :last-child .contactsRow div.Address{
+    border-bottom: 0px transparent none;
+}
+
+.phoneNumber{
+    display: inline-block;
+    float:left;
+}
+
+.emailAddress{
+    display: inline-block;
+    float:left;
+    border-bottom: 1px solid #000;
+}
+    
+.rightBorder{
+    /* Used on the details page only */
+    border-right: 1px solid #000;
+    padding-right: 10px;
+}
+
+.fullname,.phoneNumber{
+    border-bottom: 1px solid #000;
+    border-right: 1px solid #000;
+}
+
+.Address{
+    display: inline-block;
+    float:left;
+    border-bottom: 1px solid #000;
+    border-right: 0px transparent none;
+}
+
+.claerBoth{
+    clear:both;
+}
+
+.contactsImage{
+    width: 75px;
+    height: 100px;
+    position: absolute;
+    border: 1px solid #ccc;
+    background-color: #aaa;
+    left: 420px;
+    top: 20px;
+}
+
+
+.CompaniesTotal{
+    margin-top: 5px;
+}
+
+.contactsRow.detailsWidth > div{
+    min-width: 100px;
+}
+
+.contactsRow.detailsWidth > div.addressState{
+    width: 30px;
+    min-width: 30px;
+}
+
+
+.primary{
+    font-weight:bold;
+}
+
+.detailsHeader{
+    height: 100px;
+    margin-top: 20px;
+}
+
+.detailsFullName{
+    float:left;
+    margin-right:20px;
+    
+}

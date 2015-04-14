@@ -1,0 +1,23 @@
+<h2>{{ appSettings.title }}</h2>
+
+Filter by company name: <input type="text" ng-model="customerFilter.name" />
+<div class="CompaniesTotal">Companies: {{filtered.length}}</div>
+<hr/>  
+
+<div class="resultsWrapper">
+    <div ng-repeat="company in filtered = (companies | filter: customerFilter)" class="repeat-animation companies">
+        
+        <div>{{ company.name }}</div>
+        <div>{{ company.address1 }}</div>
+        <div>{{ company.address2 }}</div>
+        <div>{{ company.city}}, {{ company.state}} {{ company.zip}}</div>
+        <div>{{ company.phone}}</div>
+        <div><a ng-href="{{ company.website}}" target="_blank">{{ company.website}}</a></div>
+        <div company-contacts companyid="{{company.idcompanies}}" class="companyContacts"></div>
+    </div>
+</div>    
+
+<br />
+
+<footer>Version: {{ appSettings.version }} {{ showImage }}</footer>
+

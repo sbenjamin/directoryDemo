@@ -1,0 +1,29 @@
+<div class="detailsHeader">
+    <h2 class="detailsFullName">{{ contacts[0].firstname }} {{contacts[0].lastname}}</h2>
+    <div class="ng-cloak" ng-cloak >
+        <img src="app/images/{{contacts[0].image}}" />
+    </div>
+</div>    
+<hr/>
+<br />
+
+<div class="resultsDetailsWrapper">    
+    <div>* Bold indicates primary</div>
+    <div class="contactsTable contactsDetailsTable">
+        <div ng-repeat="contact in contacts">
+            <div class="contactsRow detailsRow detailsWidth clearfix">
+                <div ng-mouseover="displayImage(contact.image)" ng-mouseleave="hideImage()" class="fullname">
+                    {{contact.firstname}} {{contact.lastname}}
+                </div>
+                <div class="phoneNumber" ng-class="{primary : contact.primaryphone}">{{contact.phone}}</div>
+                <div class="emailAddress rightBorder" ng-class="{primary : contact.primaryemail}">{{contact.email}}</div>
+                <div class="Address" ng-class="{primary : contact.primaryaddress}">{{contact.address1}}</div>
+                <div class="Address" ng-class="{primary : contact.primaryaddress}">{{contact.address2}}</div>
+                <div class="Address" ng-class="{primary : contact.primaryaddress}">{{contact.city}}</div>
+                <div class="Address addressState" ng-class="{primary : contact.primaryaddress}">{{contact.state}}</div>
+                <div class="Address" ng-class="{primary : contact.primaryaddress}">{{contact.zip}}</div>
+            </div>
+        </div>
+    </div>
+</div>  
+Click <a href="#/">here</a> to return to companies directory.
